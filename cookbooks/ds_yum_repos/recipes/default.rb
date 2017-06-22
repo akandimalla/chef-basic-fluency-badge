@@ -4,18 +4,18 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
-yum_repository 'Centos-Base' do
+yum_repository 'CentOS-Base' do
 	action :delete
 end 
 
-yum_repository 'Centos-Base' do
+yum_repository 'CentOS-Base' do
         action :delete
 end
 
-yum_repository 'entOS-Debuginfo' do
+yum_repository 'CentOS-Debuginfo' do
         action :delete
 end
-yum_repository 'Centos-Media' do
+yum_repository 'CentOS-Media' do
         action :delete
 end
 
