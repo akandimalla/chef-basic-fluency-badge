@@ -172,7 +172,7 @@
         },
         "ipv6": {
           "size": "317340",
-          "refcount": "273"
+          "refcount": "285"
         },
         "fuse": {
           "size": "73530",
@@ -392,23 +392,23 @@
         "surplus": "0"
       },
       "total": "1004412kB",
-      "free": "460160kB",
-      "buffers": "39128kB",
-      "cached": "240952kB",
-      "active": "313792kB",
-      "inactive": "139072kB",
-      "dirty": "12kB",
+      "free": "462988kB",
+      "buffers": "36416kB",
+      "cached": "233520kB",
+      "active": "297096kB",
+      "inactive": "149584kB",
+      "dirty": "76kB",
       "writeback": "0kB",
-      "anon_pages": "172828kB",
-      "mapped": "50332kB",
-      "slab": "53964kB",
-      "slab_reclaimable": "26608kB",
-      "slab_unreclaim": "27356kB",
-      "page_tables": "12712kB",
+      "anon_pages": "176784kB",
+      "mapped": "50360kB",
+      "slab": "54124kB",
+      "slab_reclaimable": "25868kB",
+      "slab_unreclaim": "28256kB",
+      "page_tables": "15776kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "1026484kB",
-      "committed_as": "525552kB",
+      "committed_as": "558436kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "153176kB",
       "vmalloc_chunk": "34359578056kB",
@@ -522,7 +522,8 @@
           },
           "state": "up",
           "arp": {
-            "192.168.19.254": "00:50:56:f7:0c:48",
+            "192.168.19.254": "00:50:56:ed:2e:bb",
+            "192.168.19.2": "00:50:56:ed:21:ea",
             "192.168.19.1": "00:50:56:c0:00:08"
           },
           "routes": [
@@ -574,7 +575,7 @@
           ],
           "encapsulation": "Ethernet",
           "addresses": {
-            "12:55:67:98:19:39": {
+            "7A:32:23:F3:69:21": {
               "family": "lladdr"
             }
           },
@@ -592,15 +593,15 @@
         "interfaces": {
           "lo": {
             "rx": {
-              "bytes": "240",
-              "packets": "4",
+              "bytes": "18502555",
+              "packets": "2263",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
             },
             "tx": {
-              "bytes": "240",
-              "packets": "4",
+              "bytes": "18502555",
+              "packets": "2263",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
@@ -610,16 +611,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "277799",
-              "packets": "1695",
+              "bytes": "792964",
+              "packets": "5960",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "457276",
-              "packets": "5360",
+              "bytes": "1107841",
+              "packets": "12514",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -658,21 +659,21 @@
         "chef_root": "/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib"
       }
     },
-    "uptime_seconds": 3857,
-    "uptime": "1 hours 04 minutes 17 seconds",
-    "idletime_seconds": 3705,
-    "idletime": "1 hours 01 minutes 45 seconds",
+    "uptime_seconds": 10875,
+    "uptime": "3 hours 01 minutes 15 seconds",
+    "idletime_seconds": 10508,
+    "idletime": "2 hours 55 minutes 08 seconds",
     "filesystem": {
       "/dev/sda2": {
         "kb_size": "4341080",
-        "kb_used": "3146808",
-        "kb_available": "973756",
+        "kb_used": "3170176",
+        "kb_available": "950388",
         "percent_used": "77%",
         "mount": "/",
         "total_inodes": "275808",
-        "inodes_used": "137472",
-        "inodes_available": "138336",
-        "inodes_percent_used": "50%",
+        "inodes_used": "139093",
+        "inodes_available": "136715",
+        "inodes_percent_used": "51%",
         "fs_type": "ext4",
         "mount_options": [
           "rw"
@@ -715,7 +716,7 @@
         "kb_used": "4363088",
         "kb_available": "0",
         "percent_used": "100%",
-        "mount": "/mnt/centos6.5",
+        "mount": "/mnt/media/Centos_6.5_Final",
         "fs_type": "iso9660",
         "mount_options": [
           "ro"
@@ -6862,6 +6863,13 @@
         "installdate": "1494158467",
         "arch": "x86_64"
       },
+      "perl-Error": {
+        "epoch": "1",
+        "version": "0.17015",
+        "release": "4.el6",
+        "installdate": "1498063991",
+        "arch": "noarch"
+      },
       "libXinerama": {
         "epoch": "0",
         "version": "1.1.2",
@@ -8703,6 +8711,13 @@
         "installdate": "1494187601",
         "arch": "x86_64"
       },
+      "perl-Git": {
+        "epoch": "0",
+        "version": "1.7.1",
+        "release": "3.el6_4.1",
+        "installdate": "1498063991",
+        "arch": "noarch"
+      },
       "gvfs-afc": {
         "epoch": "0",
         "version": "1.4.3",
@@ -9564,6 +9579,13 @@
         "installdate": "1494158820",
         "arch": "noarch"
       },
+      "httpd-tools": {
+        "epoch": "0",
+        "version": "2.2.15",
+        "release": "29.el6.centos",
+        "installdate": "1498022370",
+        "arch": "x86_64"
+      },
       "boost-system": {
         "epoch": "0",
         "version": "1.41.0",
@@ -10320,6 +10342,13 @@
         "installdate": "1494349762",
         "arch": "x86_64"
       },
+      "git": {
+        "epoch": "0",
+        "version": "1.7.1",
+        "release": "3.el6_4.1",
+        "installdate": "1498063993",
+        "arch": "x86_64"
+      },
       "libgail-gnome": {
         "epoch": "0",
         "version": "1.20.1",
@@ -10866,13 +10895,6 @@
         "installdate": "1494158466",
         "arch": "x86_64"
       },
-      "httpd-tools": {
-        "epoch": "0",
-        "version": "2.2.15",
-        "release": "59.el6.centos",
-        "installdate": "1494349935",
-        "arch": "x86_64"
-      },
       "cairo": {
         "epoch": "0",
         "version": "1.8.8",
@@ -10892,6 +10914,13 @@
         "version": "2.20.51.0.2",
         "release": "5.36.el6",
         "installdate": "1494158469",
+        "arch": "x86_64"
+      },
+      "httpd": {
+        "epoch": "0",
+        "version": "2.2.15",
+        "release": "29.el6.centos",
+        "installdate": "1498022370",
         "arch": "x86_64"
       },
       "libXxf86vm": {
@@ -12151,13 +12180,13 @@
       "by_device": {
         "/dev/sda2": {
           "kb_size": "4341080",
-          "kb_used": "3146808",
-          "kb_available": "973756",
+          "kb_used": "3170176",
+          "kb_available": "950388",
           "percent_used": "77%",
           "total_inodes": "275808",
-          "inodes_used": "137472",
-          "inodes_available": "138336",
-          "inodes_percent_used": "50%",
+          "inodes_used": "139093",
+          "inodes_available": "136715",
+          "inodes_percent_used": "51%",
           "fs_type": "ext4",
           "mount_options": [
             "rw"
@@ -12213,7 +12242,7 @@
           ],
           "label": "CentOS_6.5_Final",
           "mounts": [
-            "/mnt/centos6.5"
+            "/mnt/media/Centos_6.5_Final"
           ]
         },
         "proc": {
@@ -12310,13 +12339,13 @@
       "by_mountpoint": {
         "/": {
           "kb_size": "4341080",
-          "kb_used": "3146808",
-          "kb_available": "973756",
+          "kb_used": "3170176",
+          "kb_available": "950388",
           "percent_used": "77%",
           "total_inodes": "275808",
-          "inodes_used": "137472",
-          "inodes_available": "138336",
-          "inodes_percent_used": "50%",
+          "inodes_used": "139093",
+          "inodes_available": "136715",
+          "inodes_percent_used": "51%",
           "fs_type": "rootfs",
           "mount_options": [
             "rw"
@@ -12362,7 +12391,7 @@
             "/dev/sda1"
           ]
         },
-        "/mnt/centos6.5": {
+        "/mnt/media/Centos_6.5_Final": {
           "kb_size": "4363088",
           "kb_used": "4363088",
           "kb_available": "0",
@@ -12455,14 +12484,14 @@
         "/dev/sda2,/": {
           "device": "/dev/sda2",
           "kb_size": "4341080",
-          "kb_used": "3146808",
-          "kb_available": "973756",
+          "kb_used": "3170176",
+          "kb_available": "950388",
           "percent_used": "77%",
           "mount": "/",
           "total_inodes": "275808",
-          "inodes_used": "137472",
-          "inodes_available": "138336",
-          "inodes_percent_used": "50%",
+          "inodes_used": "139093",
+          "inodes_available": "136715",
+          "inodes_percent_used": "51%",
           "fs_type": "ext4",
           "mount_options": [
             "rw"
@@ -12502,13 +12531,13 @@
           ],
           "uuid": "b06cf09f-62ef-45d0-ad71-ea551df57fe8"
         },
-        "/dev/sr0,/mnt/centos6.5": {
+        "/dev/sr0,/mnt/media/Centos_6.5_Final": {
           "device": "/dev/sr0",
           "kb_size": "4363088",
           "kb_used": "4363088",
           "kb_available": "0",
           "percent_used": "100%",
-          "mount": "/mnt/centos6.5",
+          "mount": "/mnt/media/Centos_6.5_Final",
           "fs_type": "iso9660",
           "mount_options": [
             "ro"
@@ -12601,7 +12630,7 @@
       }
     },
     "vmware": {
-      "hosttime": "19 Jun 2017 11:10:38",
+      "hosttime": "21 Jun 2017 20:49:48",
       "speed": "1797 MHz",
       "sessionid": null,
       "balloon": null,
@@ -12613,7 +12642,7 @@
       "upgrade": "VMware Tools are up-to-date.",
       "timesync": "Disabled"
     },
-    "ohai_time": 1497895838.6971984,
+    "ohai_time": 1498103389.7598343,
     "root_group": "root",
     "time": {
       "timezone": "PDT"
@@ -12694,7 +12723,7 @@
       "ULONG_MAX": 18446744073709551615,
       "USHRT_MAX": 65535,
       "WORD_BIT": 32,
-      "_AVPHYS_PAGES": 109609,
+      "_AVPHYS_PAGES": 110293,
       "_NPROCESSORS_CONF": 1,
       "_NPROCESSORS_ONLN": 1,
       "_PHYS_PAGES": 251103,
@@ -12952,13 +12981,22 @@
     },
     "shard_seed": 79494297,
     "recipes": [
-
+      "ds_yum_repos",
+      "ds_yum_repos::default"
     ],
     "expanded_run_list": [
-
+      "ds_yum_repos::default"
     ],
     "roles": [
 
-    ]
-  }
+    ],
+    "cookbooks": {
+      "ds_yum_repos": {
+        "version": "0.1.0"
+      }
+    }
+  },
+  "run_list": [
+    "recipe[ds_yum_repos]"
+  ]
 }

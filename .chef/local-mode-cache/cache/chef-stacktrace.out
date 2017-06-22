@@ -1,28 +1,37 @@
-Generated at 2017-06-19 10:59:15 -0700
-Chef::Exceptions::Exec: yum_package[apache2] (@recipe_files::/root/chef-repo/cookbooks/apache/recipes/default.rb line 7) had an error: Chef::Exceptions::Exec: yum -d0 -e0 -y install httpd-2.2.15-29.el6.centos returned 1:
-STDOUT:  You could try using --skip-broken to work around the problem
- You could try running: rpm -Va --nofiles --nodigest
-
-STDERR: Error: Package: httpd-2.2.15-29.el6.centos.x86_64 (centos6.5)
-           Requires: httpd-tools = 2.2.15-29.el6.centos
-           Installed: httpd-tools-2.2.15-59.el6.centos.x86_64 (@base)
-               httpd-tools = 2.2.15-59.el6.centos
-           Available: httpd-tools-2.2.15-29.el6.centos.x86_64 (centos6.5)
-               httpd-tools = 2.2.15-29.el6.centos
-
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/package/yum.rb:293:in `yum_command'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/package/yum.rb:355:in `install_remote_package'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/package/yum.rb:123:in `install_package'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/package.rb:114:in `block (3 levels) in <class:Package>'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/package.rb:270:in `multipackage_api_adapter'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/package.rb:113:in `block (2 levels) in <class:Package>'
+Generated at 2017-06-21 20:46:19 -0700
+Mixlib::ShellOut::ShellCommandFailed: yum_repository[DS_Sec_Ops_6.5_Repo] (ds_yum_repos::default line 35) had an error: Mixlib::ShellOut::ShellCommandFailed: execute[yum-makecache-DS_Sec_Ops_6.5_Repo] (/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/yum_repository.rb line 65) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+---- Begin output of yum -q -y makecache --disablerepo=* --enablerepo=DS_Sec_Ops_6.5_Repo ----
+STDOUT: 
+STDERR: https://192.168.19.153/6.5/repodata/repomd.xml: [Errno 14] PYCURL ERROR 7 - "couldn't connect to host"
+Trying other mirror.
+Error: Cannot retrieve repository metadata (repomd.xml) for repository: DS_Sec_Ops_6.5_Repo. Please verify its path and try again
+---- End output of yum -q -y makecache --disablerepo=* --enablerepo=DS_Sec_Ops_6.5_Repo ----
+Ran yum -q -y makecache --disablerepo=* --enablerepo=DS_Sec_Ops_6.5_Repo returned 1
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/mixlib-shellout-2.2.7/lib/mixlib/shellout.rb:289:in `invalid!'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/mixlib-shellout-2.2.7/lib/mixlib/shellout.rb:276:in `error!'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/mixin/shell_out.rb:118:in `shell_out!'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/execute.rb:62:in `block in action_run'
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/mixin/why_run.rb:52:in `add_action'
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider.rb:176:in `converge_by'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/package.rb:112:in `block in <class:Package>'
-(eval):2:in `block in action_install'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider.rb:361:in `instance_eval'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider.rb:361:in `compile_and_converge_action'
-(eval):2:in `action_install'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/execute.rb:60:in `action_run'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider.rb:145:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource.rb:622:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:69:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:77:in `block in run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:75:in `each'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:75:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:97:in `block (2 levels) in converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:97:in `each'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:97:in `block in converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource_collection/resource_list.rb:94:in `block in execute_each_resource'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource_collection/stepable_iterator.rb:114:in `call_iterator_block'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource_collection/stepable_iterator.rb:85:in `step'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource_collection/stepable_iterator.rb:103:in `iterate'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource_collection/resource_list.rb:92:in `execute_each_resource'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:96:in `converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider.rb:362:in `compile_and_converge_action'
+(eval):2:in `action_create'
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider.rb:145:in `run_action'
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource.rb:622:in `run_action'
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:69:in `run_action'
@@ -57,30 +66,39 @@ STDERR: Error: Package: httpd-2.2.15-29.el6.centos.x86_64 (centos6.5)
 /usr/bin/chef-client:58:in `load'
 /usr/bin/chef-client:58:in `<main>'
 
->>>> Caused by Chef::Exceptions::Exec: yum -d0 -e0 -y install httpd-2.2.15-29.el6.centos returned 1:
-STDOUT:  You could try using --skip-broken to work around the problem
- You could try running: rpm -Va --nofiles --nodigest
-
-STDERR: Error: Package: httpd-2.2.15-29.el6.centos.x86_64 (centos6.5)
-           Requires: httpd-tools = 2.2.15-29.el6.centos
-           Installed: httpd-tools-2.2.15-59.el6.centos.x86_64 (@base)
-               httpd-tools = 2.2.15-59.el6.centos
-           Available: httpd-tools-2.2.15-29.el6.centos.x86_64 (centos6.5)
-               httpd-tools = 2.2.15-29.el6.centos
-
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/package/yum.rb:293:in `yum_command'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/package/yum.rb:355:in `install_remote_package'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/package/yum.rb:123:in `install_package'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/package.rb:114:in `block (3 levels) in <class:Package>'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/package.rb:270:in `multipackage_api_adapter'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/package.rb:113:in `block (2 levels) in <class:Package>'
+>>>> Caused by Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+---- Begin output of yum -q -y makecache --disablerepo=* --enablerepo=DS_Sec_Ops_6.5_Repo ----
+STDOUT: 
+STDERR: https://192.168.19.153/6.5/repodata/repomd.xml: [Errno 14] PYCURL ERROR 7 - "couldn't connect to host"
+Trying other mirror.
+Error: Cannot retrieve repository metadata (repomd.xml) for repository: DS_Sec_Ops_6.5_Repo. Please verify its path and try again
+---- End output of yum -q -y makecache --disablerepo=* --enablerepo=DS_Sec_Ops_6.5_Repo ----
+Ran yum -q -y makecache --disablerepo=* --enablerepo=DS_Sec_Ops_6.5_Repo returned 1
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/mixlib-shellout-2.2.7/lib/mixlib/shellout.rb:289:in `invalid!'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/mixlib-shellout-2.2.7/lib/mixlib/shellout.rb:276:in `error!'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/mixin/shell_out.rb:118:in `shell_out!'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/execute.rb:62:in `block in action_run'
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/mixin/why_run.rb:52:in `add_action'
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider.rb:176:in `converge_by'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/package.rb:112:in `block in <class:Package>'
-(eval):2:in `block in action_install'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider.rb:361:in `instance_eval'
-/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider.rb:361:in `compile_and_converge_action'
-(eval):2:in `action_install'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider/execute.rb:60:in `action_run'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider.rb:145:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource.rb:622:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:69:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:77:in `block in run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:75:in `each'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:75:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:97:in `block (2 levels) in converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:97:in `each'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:97:in `block in converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource_collection/resource_list.rb:94:in `block in execute_each_resource'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource_collection/stepable_iterator.rb:114:in `call_iterator_block'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource_collection/stepable_iterator.rb:85:in `step'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource_collection/stepable_iterator.rb:103:in `iterate'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource_collection/resource_list.rb:92:in `execute_each_resource'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:96:in `converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider.rb:362:in `compile_and_converge_action'
+(eval):2:in `action_create'
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/provider.rb:145:in `run_action'
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/resource.rb:622:in `run_action'
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/runner.rb:69:in `run_action'

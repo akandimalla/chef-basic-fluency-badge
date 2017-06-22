@@ -1,3 +1,4 @@
+
 file '/var/www/index.html' do
         action :delete
 
